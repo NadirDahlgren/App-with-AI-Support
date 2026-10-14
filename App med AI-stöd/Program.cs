@@ -42,7 +42,7 @@
                         Console.WriteLine($"{userName} has been created and added to the list.");
                         break;
 
-                    case 2: // Prints out every character if avaliable, with the method. 
+                    case 2: // Prints out every character if available, with the method. 
                         Console.Clear();
                         if (randomCharacters.Count > 0)
                         {
