@@ -5,7 +5,7 @@
         static void Main(string[] args)
         {
             // List for storing the characters. 
-            List<Character> randomCharacters = new List<Character>();
+            List<Character> characterList = new List<Character>();
 
             // Controls the main menu loop.
             bool charMenu = true;
@@ -38,15 +38,15 @@
                             break;
                         }
                         Character newCharacter = new Character(userName);
-                        randomCharacters.Add(newCharacter);
+                        characterList.Add(newCharacter);
                         Console.WriteLine($"{userName} has been created and added to the list.");
                         break;
 
-                    case 2: // Prints out every character if available, with the method. 
+                    case 2: // Displays all saved characters using the DisplayCharacter method.
                         Console.Clear();
-                        if (randomCharacters.Count > 0)
+                        if (characterList.Count > 0)
                         {
-                            foreach (Character character in randomCharacters)
+                            foreach (Character character in characterList)
                             {
                                 character.DisplayCharacter();
                             }
@@ -59,9 +59,9 @@
                         
                     case 3: // Clears the list if any characters have been created.  
                         Console.Clear();
-                        if (randomCharacters.Count > 0)
+                        if (characterList.Count > 0)
                         {
-                            randomCharacters.Clear();
+                            characterList.Clear();
                             Console.WriteLine("The list of characters has been cleared.");
                         }
                         else
